@@ -1,0 +1,72 @@
+.musicView-out{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    background: green;
+}
+
+.musicView-out .yincang{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: rgba(000, 000, 000, 0.3);
+    z-index: 999;
+}
+
+.musicView-out header{
+    height: 85px;
+    background: red;   
+}
+.musicView-head-top{
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 40px;
+}
+.musicView-out header .musicView-head-nva{
+    width: 50px;
+    text-align: center;
+}
+.musicView-head-nva .active{
+    color: #fff;
+}
+.musicView-head-left,.musicView-head-right{
+    width: 30px;
+    margin: 0 10px;
+}
+
+
+.musicView-out section{
+    flex: 1;  
+    background: #888;
+    overflow: hidden;
+    
+}
+
+.musicView-out footer{
+    height: 54px;
+    background:red;
+    overflow: hidden;
+}
+
+.am-search {
+    border-bottom: 1px solid #ddd;
+  }
+  .sub-title {
+    color: #888;
+    font-size: 14px;
+    padding: 30px 0 18px 0;
+  }
+  
+  .sectionBox{
+      height: 1000px;
+      overflow: hidden;
+  }
+
+
+
