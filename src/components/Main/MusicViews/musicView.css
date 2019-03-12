@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
-    background: green;
+
 }
 
 .musicView-out .yincang{
@@ -20,7 +20,8 @@
 
 .musicView-out header{
     height: 85px;
-    background: red;   
+    background: red;
+    background: #61bf82;   
 }
 .musicView-head-top{
     height: 40px;
@@ -43,14 +44,11 @@
 
 .musicView-out section{
     flex: 1;  
-    background: #888;
     overflow: hidden;
     
 }
 
 .musicView-out footer{
-    height: 54px;
-    background:red;
     overflow: hidden;
 }
 
@@ -64,7 +62,7 @@
   }
   
   .sectionBox{
-      height: 1000px;
+      height: 8300px;
       overflow: hidden;
   }
 

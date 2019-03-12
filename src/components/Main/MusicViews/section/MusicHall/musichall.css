@@ -1,0 +1,41 @@
+.am-wingblank.am-wingblank-lg,.am-wingblank{
+    margin: 0;
+    padding: 0;
+}
+.Musichall-nav{
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around; 
+}
+.Musichall-nav div{
+    text-align: center;
+
+}
+.Recommend img{
+    height: 178px;
+    width: 178px;
+}
+.Recommend ul{
+    padding: 5px 7px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.Recommend h2{
+    height: 37px;
+    line-height: 37px;
+    text-align: center;
+    font-size: 19px;
+    font-weight: normal;
+    letter-spacing:30px;
+}
+.Recommend p{
+    width: 160px;
+    font-size: 13px;
+    margin: 10px 0;
+}
+.Recommend span{
+    display: block;
+    margin: 10px 0;
+}

@@ -43,6 +43,9 @@ class MusicView extends React.Component{
             <Router>           
             <div className='musicView-out'>
                 <div className='yincang' style={isyc} onClick={this.isshow.bind(this)}></div>
+                <div className='gedan'>
+                    <Route path='/gedan/:id'></Route>
+                </div>
                 <header>
                     <div className='musicView-head-top'>
                         {/* <div className='musicView-head-left' onClick={this.zhan.bind(this)}>三</div>
@@ -78,6 +81,7 @@ class MusicView extends React.Component{
                 </div>
                 
                 </section>
+                
                 <footer>
                     <div className='audio-out'>
                         <audio src='https://api.hibai.cn/music/Music/Music?id=286510&type=url' style={audiocss} controls></audio>
@@ -90,7 +94,7 @@ class MusicView extends React.Component{
 
     componentDidMount(){
         var myIscroll=new IScroll('section',{})
-        $(document).on('touchend',function(){
+       /*  $(document).on('touchend',function(){
             
             if(myIscroll.y>50){
                 console.log('下拉刷新')
@@ -99,7 +103,8 @@ class MusicView extends React.Component{
                 console.log('上拉加载')
                 
             }
-        })
+        }) */
+        myIscroll.refresh();
         
     }
 }
