@@ -7,6 +7,7 @@ import './musicView.css'
 import My from './section/My/my'
 import Musichall from './section/MusicHall/musichall'
 import Discover from './section/Discover/discover'
+import Gedan from './Gedan/gedan';
 
 
 class MusicView extends React.Component{
@@ -43,9 +44,9 @@ class MusicView extends React.Component{
             <Router>           
             <div className='musicView-out'>
                 <div className='yincang' style={isyc} onClick={this.isshow.bind(this)}></div>
-                <div className='gedan'>
-                    <Route path='/gedan/:id'></Route>
-                </div>
+                <div>
+                <Route path='/gedan' component={Gedan}></Route>
+                    </div>                                                   
                 <header>
                     <div className='musicView-head-top'>
                         {/* <div className='musicView-head-left' onClick={this.zhan.bind(this)}>三</div>
@@ -72,8 +73,10 @@ class MusicView extends React.Component{
                     </div>
                     
                 </header>
-                <section>                                                  
-                <div className='sectionBox'>                                                       
+                <section>
+                                                                      
+                <div className='sectionBox'>
+                                                                           
                     <Route path='/main/my' component={My}></Route>
                     <Route path='/main/musichall' component={Musichall}></Route>
                     <Route path='/main/discover' component={Discover}></Route>

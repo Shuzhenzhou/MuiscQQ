@@ -1,4 +1,5 @@
 import React from 'react'
+import {NavLink} from 'react-router-dom'
 import $ from 'jquery'
 import { Carousel, WingBlank } from 'antd-mobile';
 import './musichall.css'
@@ -18,7 +19,6 @@ class Musichall extends React.Component{
         console.log(id)
     }
     gedan(id){
-        console.log(id)
         this.props.history.push('/gedan')
         /* $.ajax({
             url:'https://api.bzqll.com/music/tencent/songList?key=579621905&id='+id,
@@ -85,11 +85,15 @@ class Musichall extends React.Component{
                         {
                             this.state.gedanList.map(function(item,i){
                                 return(<li key={i}>
-                                    <div><img src={item.pic} onTouchEnd={_this.gedan.bind(_this,item.id)}/></div>
-                                    <div>
-                                        <p>{item.name}</p>
-                                        <span>{item.creator}</span>
-                                    </div>
+                                    
+                                        <div><img src={item.pic} onTouchEnd={_this.gedan.bind(_this,item.id)}/></div>
+                                        <div>
+                                            <p>{item.name}</p>
+                                            <span>{item.creator}</span>
+                                        </div>
+                                    
+                                        
+                                                                     
                                 </li>)
                             })
                         }
