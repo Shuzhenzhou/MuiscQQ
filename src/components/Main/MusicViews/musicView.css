@@ -5,7 +5,11 @@
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
+<<<<<<< HEAD
    
+=======
+
+>>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
 }
 
 .musicView-out .yincang{
@@ -20,7 +24,8 @@
 
 .musicView-out header{
     height: 85px;
-    background: red;   
+    background: red;
+    background: #61bf82;   
 }
 .musicView-head-top{
     height: 40px;
@@ -43,14 +48,15 @@
 
 .musicView-out section{
     flex: 1;  
+<<<<<<< HEAD
   
+=======
+>>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
     overflow: hidden;
     
 }
 
 .musicView-out footer{
-    height: 54px;
-    background:red;
     overflow: hidden;
 }
 
@@ -64,7 +70,7 @@
   }
   
   .sectionBox{
-      height: 1000px;
+      height: 8300px;
       overflow: hidden;
   }
 

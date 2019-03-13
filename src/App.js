@@ -13,12 +13,20 @@ class App extends Component {
       <div className="App">        
         <Router>
           <div>
+<<<<<<< HEAD
             <Route path="/newsong" component={Newsong}></Route>
             <Route path="/songlist" component={Songlist}></Route>    
             <Route path="/login" component={Login}/>
             <Route path="/regist" component={Regist}/>
             <Route path="/main" component={Main}/>
             <Redirect path="/login"/>                      
+=======
+            
+            <Route path="/login" component={Login} />
+            <Route path="/regist" component={Regist} />
+            <Route path="/main" component={Main} />
+            <Redirect to='login'/>
+>>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
           </div>         
         </Router>
       </div>
