@@ -33,12 +33,12 @@ class Setting extends React.Component{
             <div className="settingOut" style={zk}>
                 <div className="set-top"></div>
                 <div className="set-content">
-                    <ul className="set-cont">
+                    <ul className="set-contt">
                         <li>个性装扮  <span>默认套装</span></li>
                         <li>消息中心</li>
                         <li>免流向服务  <span>。</span></li>
                     </ul>
-                    <div className="set-cont">
+                    <div>
                             <List renderHeader={() => ''}>
                                 <List.Item
                                     extra={<Switch

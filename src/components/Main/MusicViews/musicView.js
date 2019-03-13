@@ -9,6 +9,7 @@ import Musichall from './section/MusicHall/musichall'
 import Discover from './section/Discover/discover'
 
 
+
 class MusicView extends React.Component{
     constructor(props){
         super(props)
@@ -43,6 +44,7 @@ class MusicView extends React.Component{
             <Router>           
             <div className='musicView-out'>
                 <div className='yincang' style={isyc} onClick={this.isshow.bind(this)}></div>
+                
                 <header>
                     <div className='musicView-head-top'>
                         {/* <div className='musicView-head-left' onClick={this.zhan.bind(this)}>三</div>
@@ -63,14 +65,13 @@ class MusicView extends React.Component{
                         <div className='musicView-head-right'>＋</div>
                     </div>
                     <div className='musicView-search'>
-
                     <SearchBar placeholder="搜索"/>
                     <WhiteSpace />
-                    </div>
-                    
+                    </div> 
                 </header>
                 <section>                                                  
-                <div className='sectionBox'>                                                       
+                <div className='sectionBox'>
+                                                                     
                     <Route path='/main/my' component={My}></Route>
                     <Route path='/main/musichall' component={Musichall}></Route>
                     <Route path='/main/discover' component={Discover}></Route>
@@ -78,6 +79,7 @@ class MusicView extends React.Component{
                 </div>
                 
                 </section>
+                
                 <footer>
                     <div className='audio-out'>
                         <audio src='https://api.hibai.cn/music/Music/Music?id=286510&type=url' style={audiocss} controls></audio>
@@ -87,17 +89,14 @@ class MusicView extends React.Component{
             </Router>
         )
     }
-
     componentDidMount(){
         var myIscroll=new IScroll('section',{})
-        $(document).on('touchend',function(){
-            
+        $(document).on('touchend',function(){        
             if(myIscroll.y>50){
                 console.log('下拉刷新')
             }
             if(myIscroll.y < myIscroll.maxScrollY-50){
                 console.log('上拉加载')
-                
             }
         })
         

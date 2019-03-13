@@ -1,0 +1,29 @@
+.newsong-nav{
+    height: 30px;
+    font-size: 16px;
+}
+.newsong-nav p{
+    display: inline-block;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+    width: 20%;
+    font-size: 16px;
+}
+.newsong-nav h3{
+    display: inline-block;
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    width: 60%;
+    font-size: 16px;
+
+}
+.newsong-nav span{
+    display: inline-block;
+    text-align: right;
+    height: 30px;
+    line-height: 30px;
+    width: 20%;
+    font-size: 16px;
+}

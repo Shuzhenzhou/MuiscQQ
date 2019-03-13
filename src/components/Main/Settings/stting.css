@@ -22,7 +22,11 @@ font-size: 18px;
     display: flex;
 
 }
-
+.set-contt li{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+}
 .set-bottom{
     border-top:1px solid #cccccc;
     height:40px; 
@@ -98,8 +102,8 @@ html:not([data-scale]) .am-list-body::after {
         justify-content: center;
         -webkit-align-items: center;
         align-items: center;
-        left: -170px;
-        top: -291px;
+        left: -10px;
+        top: -21px;
         -webkit-transform: translateZ(1px);
         transform: translateZ(1px);
     }
@@ -107,8 +111,8 @@ html:not([data-scale]) .am-list-body::after {
         position: fixed;
         max-width: 50%;
         width: auto;
-        left: 30%;
-        top: 27%;
+        left: 45%;
+        top: 47%;
         -webkit-transform: translateZ(1px);
         transform: translateZ(1px);
     }

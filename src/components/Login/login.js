@@ -43,7 +43,7 @@ class Login extends React.Component{
     }
 
     componentDidMount(){
-        $.ajax({
+       /*  $.ajax({
             type:'get',
             url:'http://47.94.8.35/QQMusic/login.do',
             data:{name:12345678912,password:123456},
@@ -52,7 +52,7 @@ class Login extends React.Component{
             success:function(data){
                 console.log(data)
             }
-        })
+        }) */
     }
 }
 

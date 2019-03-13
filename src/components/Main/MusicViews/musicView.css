@@ -5,7 +5,7 @@
     width: 100vw;
     height: 100vh;
     flex-shrink: 0;
-    background: green;
+   
 }
 
 .musicView-out .yincang{
@@ -43,7 +43,7 @@
 
 .musicView-out section{
     flex: 1;  
-    background: #888;
+  
     overflow: hidden;
     
 }

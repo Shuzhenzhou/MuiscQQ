@@ -1,3 +1,197 @@
 .myOut{
+    flex: 1;
+    overflow: auto;
+}
+.center-tlogi{
+    height: 70px;
+}
+.center-member{
+    height: 70px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 1px 1px 19px -3px rgba(0, 0, 0, 0.7);
+}
+.center-member ul{
+    display: flex;
+    justify-content: space-around;
+}
+.center-member ul li{
+ 
+    display: flex;
+    justify-content: space-around;
+    margin-top:10px; 
+}
+.center-member ul li i{
+   width: 40px;
+   background: gold;
+   height: 10px
+}
+.center-mem h2{
+    font-size: 16px;
+    line-height: 24px;
+}
+.center-mem p{
+    font-size: 14px;
+    color: #9a9a9a;
+    line-height: 24px;
+}
+.center-classify{
+    width: 100%;
+    height:200px; 
     
 }
+.center-classify ul{
+    display: flex;
+    width: 90%;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    margin: 0 auto; 
+}
+.center-classify ul li{
+    width: 30%;
+    margin-top:5px;
+    height: 95px;
+    display: flex; 
+    flex-wrap:wrap; 
+    align-content: center;
+   justify-content: center;
+   
+}
+.center-classify ul li img{
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+.center-classify ul li h3{
+    font-size:16px;
+    margin: 5px 0; 
+    height: 18px;
+    display: block;
+    text-align: center;
+    width:90%
+    }
+.center-classify ul li i{
+    display: block;
+    height: 14px;
+    line-height: 20px;
+    width:50%
+    }
+    .center-attention{
+        width: 90%;
+        margin: 0 auto;
+    }
+        .center-attention h2{
+            display: block;
+            font-size:18px; 
+            height:30px;
+            line-height: 30px;
+        }
+        .center-attention ul li{
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            margin: 5px 0;
+        } 
+            .center-attention ul li img{
+                display:inline-block;
+                height: 60px;
+                width: 60px;
+                margin-right:5px; 
+            }
+            .center-attnev{
+                width:77%
+            }
+            .center-attnev h5{
+                height: 28px;
+                display: block;
+                font-size: 18px;
+                line-height: 28px;
+            }
+            .center-attnev span{
+                height: 20px;
+                display: block;
+                line-height: 25px;
+                font-size: 14px;
+                width: 90%;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+    .center-song{
+        width: 90%;
+        margin: 0 auto; 
+        }    
+        .center-sonti {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .center-sontileft h2{
+            font-size:18px; 
+            height:30px;
+            line-height: 30px;
+            display: inline-block;
+        }     
+        .center-sontileft strong{
+            display: inline-block;
+            width: 23px;
+            font-size: px;
+            color: #9a9a9a;
+            text-align: center  
+        }
+        .center-sontiright strong{
+            font-size:18px; 
+            color: #9a9a9a;
+            width: 30px;
+            display: inline-block;
+        }
+        .center-sontiright span a{
+            font-size:18px;
+            color: #9a9a9a;
+            width: 50px;
+            display: inline-block;
+        }
+        .center-sonti span{
+            display: inline-block;
+            font-size: 18px;
+            color: #9a9a9a;
+            
+        }
+        .center-song ul li{
+            height: 60px;
+            display: flex;
+            justify-content: space-around;
+            margin: 5px 0;
+       
+            } 
+            .center-song ul li img{
+                display:inline-block;
+                height: 60px;
+                width: 60px;
+                margin-right:5px; 
+            }
+            .center-sonlist{
+                width: 77%;
+                display: flex;
+                justify-content:space-between;
+           
+                height: 50px;
+
+            }        
+                .center-sonlileft h5{
+                    font-size: 18px;
+                    height: 30px;
+                    line-height: 30px;
+                }
+                .center-sonlileft span{
+                    font-size: 14px;
+                    
+                }
+                .center-sonliright{
+                   
+                    line-height: 50px;
+                }
+                .center-song ul li .center-sonlist .center-sonliright img{
+                    display: inline-block;
+                    width: 14px;
+                    height: 18px;
+                }
