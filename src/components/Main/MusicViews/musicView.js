@@ -45,8 +45,8 @@ class MusicView extends React.Component{
             <div className='musicView-out'>
                 <div className='yincang' style={isyc} onClick={this.isshow.bind(this)}></div>
                 <div>
-                <Route path='/gedan' component={Gedan}></Route>
-                    </div>                                                   
+                    <Route path='/gedan' component={Gedan}></Route>
+                </div>                                                   
                 <header>
                     <div className='musicView-head-top'>
                         {/* <div className='musicView-head-left' onClick={this.zhan.bind(this)}>三</div>

@@ -18,8 +18,8 @@ class Musichall extends React.Component{
     zhuanji(id){
         console.log(id)
     }
-    gedan(id){
-        this.props.history.push('/gedan')
+    gedan(data){
+        this.props.history.push({pathname:'/gedan',query:{id:data}})
         /* $.ajax({
             url:'https://api.bzqll.com/music/tencent/songList?key=579621905&id='+id,
             async:true,
@@ -114,7 +114,7 @@ class Musichall extends React.Component{
          async:true,
          dataType:'json',
          success:function(data){
-             console.log(data.data)
+             
              _this.setState({gedanList:data.data})
          }
      })
