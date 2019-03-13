@@ -7,7 +7,9 @@
     flex-shrink: 0;
 
 }
-
+.audio-out{
+    z-index: 99999;
+}
 .musicView-out .yincang{
     position: absolute;
     width: 100vw;

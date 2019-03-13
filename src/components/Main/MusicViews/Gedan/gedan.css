@@ -1,14 +1,19 @@
 .gedan-out{
-    position: absolute;
+    position: absolute;  
     top:0;
     left: 0;
     width: 100%;
     height: 91vh;
     z-index: 99999;
     background: red;
+    overflow: hidden;
+}
+.kehua{
+    height: 1040px;
+    overflow: hidden;
 }
 .gedan-out .gedan-head{
-    height: 200px;
+    height: 240px;
     padding: 0 20px;
 }
 .gedan-head-top{
@@ -35,10 +40,49 @@
 .gedan-head-bottom{
     width: 100%;
     height: 50px;
-    background: green;
+    background: gold;
     text-align: center;
     line-height: 50px;
 }
 img{
     display: block;
+}
+
+
+
+.gedan-out section{
+    /* height: 100%;    */
+    background: green;
+}
+
+.gequ{
+    padding: 0 10px;
+}
+.gequ li{
+    
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #cecece;
+    border-radius:10px;
+    padding: 0 20px; 
+    margin: 5px 0;
+}
+.gequ-l{
+    width: 277px;
+    line-height: 25px;
+}
+.gequ-l p{
+    width: 227px;
+    height: 25px;
+    white-space:normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.gequ-l .name{
+    font-size: 12px;
+    color: #cecece;
+}
+.gequ-r{
+    line-height: 50px;
 }

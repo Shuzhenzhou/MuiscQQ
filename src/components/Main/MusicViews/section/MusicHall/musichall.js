@@ -114,7 +114,7 @@ class Musichall extends React.Component{
          async:true,
          dataType:'json',
          success:function(data){
-             
+             console.log(data)
              _this.setState({gedanList:data.data})
          }
      })

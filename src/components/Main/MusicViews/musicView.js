@@ -87,7 +87,7 @@ class MusicView extends React.Component{
                 
                 <footer>
                     <div className='audio-out'>
-                        <audio src='https://api.hibai.cn/music/Music/Music?id=286510&type=url' style={audiocss} controls></audio>
+                        <audio src='https://api.bzqll.com/music/tencent/url?id=004F6Mxm4XvTgI&key=579621905' style={audiocss} controls></audio>
                     </div>
                 </footer>
             </div>
