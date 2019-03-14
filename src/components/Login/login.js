@@ -51,17 +51,17 @@ class Login extends React.Component{
                         Toast.success('登陆成功', 1);
                         Store.dispatch(Action.isLogin(name))
                         setTimeout(function(){
-                            _this.props.history.push('/main')
+                           // _this.props.history.push('/main')
                         },1000)
-
-                        // $.ajax({
-                        //     url:'http://47.94.8.35/QQMusic/getsession.do',
-                        //     async:true,
-                        //     dataType:'json',
-                        //     success:function(data){
-                        //         console.log(data)
-                        //     }
-                        // })
+                      /*   $.ajax({
+                                url:'http://47.94.8.35/QQMusic/getsession.do',
+                                data:{name:name,password:password},
+                                async:true,
+                                dataType:'json',
+                                success:function(data){
+                                    console.log(data)
+                                }        
+                            }) */
                         
                     }else{
                         Toast.offline('密码或账号错误，请重试', 1);
