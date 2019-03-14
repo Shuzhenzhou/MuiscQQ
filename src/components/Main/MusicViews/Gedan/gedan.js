@@ -1,6 +1,7 @@
 import React from 'react'
 import $ from 'jquery'
 import IScroll from 'iscroll'
+import { Toast } from 'antd-mobile';
 import './gedan.css'
 import Store from '../../../Store'
 import Reducer from '../../../Reducer';
@@ -37,6 +38,8 @@ class Gedan extends React.Component{
                     console.log(data)
                 }
             })
+        }else{
+            Toast.info('未登陆请先登陆', 1);
         }
         
     }

@@ -116,3 +116,10 @@ html:not([data-scale]) .am-list-body::after {
         -webkit-transform: translateZ(1px);
         transform: translateZ(1px);
     }
+
+    .set-bottom button{
+        width: 100px;
+        height: 40px;
+        margin: 10px auto;
+        background: green;
+    }

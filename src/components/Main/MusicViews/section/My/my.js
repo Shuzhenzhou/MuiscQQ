@@ -140,7 +140,7 @@ class My extends React.Component{
     }
 
     componentDidMount(){
-       console.log(Store.getState().islogin)
+      
        
         $.ajax({
             url:'http://47.94.8.35/QQMusic/getsession.do',

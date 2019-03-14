@@ -1,4 +1,5 @@
 import React from 'react'
+import { Toast } from 'antd-mobile';
 import $ from 'jquery'
 import Action from '../../Action'
 import {Route,BrowserRouter as Router,NavLink,Redirect} from 'react-router-dom'
@@ -63,6 +64,24 @@ class MusicView extends React.Component{
     }
     changeItem(){
         this.setState({gequid:Store.getState().bofangge})
+    }
+
+    shouchang(id){
+        console.log(id)
+        if(Store.getState().islogin.length!=0){
+            $.ajax({
+                url:'http://47.94.8.35/QQMusic/addColler.do',
+                async:true,
+                data:{uid:Store.getState().islogin,sid:id},
+                dataType:'json',
+                success:function(data){
+                    console.log(data)
+                }
+            })
+        }else{
+            Toast.info('未登陆请先登陆', 1);
+        }
+        
     }
 
 
@@ -150,7 +169,7 @@ class MusicView extends React.Component{
                                     return(<li key={i} onTouchEnd={this.bofang.bind(this,item.url)}>
                                         <span>{item.name}</span>
                                         <span>{item.singer}</span>
-                                        <span className='shouchang'>收藏</span>
+                                        <span className='shouchang' onTouchEnd={this.shouchang.bind(this)}>收藏</span>
                                     </li>)
                                     
                                 })

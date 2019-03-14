@@ -1,6 +1,8 @@
 import React from 'react'
 import './stting.css'
 import { List, Switch ,Toast, WhiteSpace, WingBlank, Button} from 'antd-mobile';
+import Store from '../../Store'
+import Action from '../../Action'
 
 
 function successToast() {
@@ -21,11 +23,30 @@ class Setting extends React.Component{
             checked1: true,
             checked2: true,
             checked3: true,
+            loginorout:'登陆'
           }
+          this.changeItem=this.changeItem.bind(this)
+    }
+
+    componentDidMount(){
+        Store.subscribe(this.changeItem)
+        if(Store.getState().islogin.length!=0){
+            this.setState({loginorout:'退出登陆'})
+    }
+}
+    huan(){
+        if(Store.getState().islogin.length!=0){
+            Store.dispatch(Action.isLogin(''))
+            this.setState({loginorout:'登陆'})
+        }else{
+            window.location.href='/login'
+        }
+    }
+    changeItem(){
+        this.setState({gequid:Store.getState().islogin})
     }
 
     render(){
-        console.log(this.props.iszhankai)
         var zk={
             display: this.props.iszhankai,
         }
@@ -92,15 +113,13 @@ class Setting extends React.Component{
                     </ul>
                 </div>
                <div className="set-bottom">
-                   <div><span>a</span>设置</div>
-                   <div><span>a</span>关闭</div>
-                   </div>
+                  <button onTouchEnd={this.huan.bind(this)}>{this.state.loginorout}</button>
+                </div>
             </div>
         )
     }
-    componentDidMount(){
-
-    }
+    
+    
 }
 
 
