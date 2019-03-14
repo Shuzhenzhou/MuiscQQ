@@ -5,7 +5,7 @@
     width: 100%;
     height: 91vh;
     z-index: 99999;
-    background: red;
+    background: #cecece;
     overflow: hidden;
 }
 .kehua{
@@ -40,7 +40,7 @@
 .gedan-head-bottom{
     width: 100%;
     height: 50px;
-    background: gold;
+    background: greenyellow;
     text-align: center;
     line-height: 50px;
 }
@@ -52,7 +52,7 @@ img{
 
 .gedan-out section{
     /* height: 100%;    */
-    background: green;
+    background: #fff;
 }
 
 .gequ{

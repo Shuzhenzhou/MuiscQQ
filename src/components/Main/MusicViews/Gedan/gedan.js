@@ -54,6 +54,10 @@ class Gedan extends React.Component{
         })
     }
 
+    back(){
+        this.props.history.go(-1)
+    }
+
     render(){
         console.log(this.state.gequid)
          var _this=this;
@@ -62,7 +66,7 @@ class Gedan extends React.Component{
             <div className='kehua'>
                 <div className='gedan-head'>
                     <div className='gedan-head-top'>
-                        <div>&lt;</div>
+                        <div onTouchEnd={this.back.bind(this)}>&lt;</div>
                         <div>歌单</div>
                         <div>...</div>
                     </div>

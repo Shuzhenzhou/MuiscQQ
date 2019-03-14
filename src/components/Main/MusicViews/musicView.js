@@ -1,5 +1,6 @@
 import React from 'react'
 import $ from 'jquery'
+import Action from '../../Action'
 import {Route,BrowserRouter as Router,NavLink,Redirect} from 'react-router-dom'
 import { SearchBar, Button, WhiteSpace, WingBlank} from 'antd-mobile';
 import Store from '../../Store'
@@ -34,7 +35,7 @@ class MusicView extends React.Component{
         this.setState({ value },function(){
             var _this=this;
             $.ajax({
-                url:'https://api.bzqll.com/music/tencent/search?key=579621905&s='+value+'&limit=15&offset=0&type=song',
+                url:'https://api.bzqll.com/music/tencent/search?key=579621905&s='+value+'&limit=14&offset=0&type=song',
                 async:true,
                 dataType:"json",
                 success:function(data){
@@ -42,11 +43,11 @@ class MusicView extends React.Component{
                     _this.setState({list:data.data})
                 }
             })
-        });
-        
-       
-        
-      };
+        });       
+      }
+      bofang(id){
+        Store.dispatch(Action.boFang(id))
+    }
 
     zhan(){
         this.setState({iszhan:"block",isshowyc:'block'},function(){
@@ -145,7 +146,7 @@ class MusicView extends React.Component{
                         <ul>
                             {
                                 this.state.list.map((item,i)=>{
-                                    return(<li key={i}>
+                                    return(<li key={i} onTouchEnd={this.bofang.bind(this,item.url)}>
                                         <span>{item.name}</span>
                                         <span>{item.singer}</span>
                                     </li>)
