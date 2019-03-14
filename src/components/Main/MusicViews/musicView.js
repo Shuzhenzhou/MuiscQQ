@@ -86,15 +86,6 @@ class MusicView extends React.Component{
 
 
     componentDidMount(){
-
-        $.ajax({
-            url:'http://47.94.8.35/QQMusic/getsession.do',
-            async:true,
-            dataType:'json',
-            success:function(data){
-                console.log(data)
-            }
-        })
         
         var _this=this;
         
