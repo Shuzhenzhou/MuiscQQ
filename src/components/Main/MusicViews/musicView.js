@@ -7,8 +7,8 @@ import './musicView.css'
 import My from './section/My/my'
 import Musichall from './section/MusicHall/musichall'
 import Discover from './section/Discover/discover'
-import Gedan from './Gedan/gedan';
 
+import Gedan from './Gedan/gedan';
 
 
 class MusicView extends React.Component{
@@ -29,7 +29,7 @@ class MusicView extends React.Component{
         this.setState({iszhan:"none",isshowyc:'none'},function(){
             this.props.isshow(this.state.iszhan)
         });
-        console.log("a")
+       
     }
     render(){
         var isyc={
@@ -45,13 +45,11 @@ class MusicView extends React.Component{
             <Router>           
             <div className='musicView-out'>
                 <div className='yincang' style={isyc} onClick={this.isshow.bind(this)}></div>
-<<<<<<< HEAD
                 
-=======
                 <div>
-                <Route path='/gedan' component={Gedan}></Route>
-                    </div>                                                   
->>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
+                    <Route path='/gedan' component={Gedan}></Route> 
+                </div>                                                   
+
                 <header>
                     <div className='musicView-head-top'>
                         {/* <div className='musicView-head-left' onClick={this.zhan.bind(this)}>三</div>
@@ -76,16 +74,11 @@ class MusicView extends React.Component{
                     <WhiteSpace />
                     </div> 
                 </header>
-<<<<<<< HEAD
-                <section>                                                  
-                <div className='sectionBox'>
-                                                                     
-=======
                 <section>
                                                                       
                 <div className='sectionBox'>
                                                                            
->>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
+
                     <Route path='/main/my' component={My}></Route>
                     <Route path='/main/musichall' component={Musichall}></Route>
                     <Route path='/main/discover' component={Discover}></Route>
@@ -102,15 +95,14 @@ class MusicView extends React.Component{
             </div>
             </Router>
         )
-    }
+                    }
     componentDidMount(){
         var myIscroll=new IScroll('section',{})
-<<<<<<< HEAD
+
         $(document).on('touchend',function(){        
-=======
+
        /*  $(document).on('touchend',function(){
             
->>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
             if(myIscroll.y>50){
                 console.log('下拉刷新')
             }
@@ -120,6 +112,9 @@ class MusicView extends React.Component{
         }) */
         myIscroll.refresh();
         
-    }
+    }  )
+
+}
+
 }
 export default MusicView;

@@ -10,11 +10,19 @@ import run from "../../../../../assets/img/icon-zanting.png"
 import right from "../../../../../assets/img/icon-right.png"
 
 class My extends React.Component{
-  
+  constructor(props){
+      super(props)
+  }
 
     btn(e){
       //  console.log("aaaaa",e)
         window.location.href="/newsong"
+    }
+    like(){
+        window.location.href="/ilike"
+    }
+    nowshow(){
+        this.props.history.push("/nowshow")
     }
     render(){
         return(
@@ -24,7 +32,6 @@ class My extends React.Component{
                 <div className="center-tlogi">
                     <h3>qiangdenglu</h3>
                 </div>
-
                 <div className="center-member">
                     <ul>
                         <li>
@@ -56,14 +63,14 @@ class My extends React.Component{
                         <li>
                             <img src={xiazai}/>
                             <h3>下载音乐</h3>
-                            <i>777</i>
+                            <i>777</i>s
                         </li>
-                        <li>
+                        <li  onTouchEnd={this.nowshow.bind(this)}>
                             <img src={recent}/>
                             <h3>最近播放</h3>
                             <i>666</i>
                         </li>
-                        <li>
+                        <li onTouchEnd={this.like.bind(this)}>
                             <img src={like}/>
                             <h3>我喜欢</h3>
                             <i>666</i>

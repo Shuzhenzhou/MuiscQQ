@@ -6,6 +6,9 @@ import Regist from './components/Regist/regist'
 import Main from './components/Main/Main'
 import Newsong from './components/Newsong/Newsong'
 import Songlist from './components/Main/Songlist/Songlist'
+import Ilike from "./components/Main/Ilike/Ilike"
+import Nowshow from "./components/Main/Nowshow/Nowshow"
+
 
 class App extends Component {
   render() {
@@ -13,20 +16,15 @@ class App extends Component {
       <div className="App">        
         <Router>
           <div>
-<<<<<<< HEAD
-            <Route path="/newsong" component={Newsong}></Route>
-            <Route path="/songlist" component={Songlist}></Route>    
+          
+            <Route path="/nowshow" component={Nowshow}></Route>  
+            <Route path="/ilike" component={Ilike}></Route>  
+            <Route path="/songlist" component={Songlist}></Route>          
+            <Route path="/newsong" component={Newsong}></Route>                                                                                                                                                                                                                                                                                                                                                                                                                                            
             <Route path="/login" component={Login}/>
             <Route path="/regist" component={Regist}/>
             <Route path="/main" component={Main}/>
             <Redirect path="/login"/>                      
-=======
-            
-            <Route path="/login" component={Login} />
-            <Route path="/regist" component={Regist} />
-            <Route path="/main" component={Main} />
-            <Redirect to='login'/>
->>>>>>> 480266321aa02d8bc23d2d322bcc4474cd73f7de
           </div>         
         </Router>
       </div>

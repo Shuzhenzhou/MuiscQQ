@@ -1,14 +1,18 @@
 import React from 'react'
 import './Newsong.css'
 import {Route,BrowserRouter as Router,NavLink,Redirect} from 'react-router-dom'
-import Songlist from '../Main/Songlist/Songlist';
 
 class Newsong extends React.Component{
     constructor(props){
         super(props)
+        this.state={
+            name:""
+        }
     }
     btn(){
-        window.location.href='/songlist'
+       var value=this.refs.name.value
+    this.props.history.push({pathname:'/songlist',query:{name:value}})
+
     }
     back(){
         this.props.history.go(-1)
@@ -22,12 +26,11 @@ class Newsong extends React.Component{
                     <span onTouchEnd={this.btn.bind(this)}>保存</span>
                 </div>
                 <div className='newsong-inpu'>
-                    <input type="text"/>
+                    <input type="text" ref="name"/>
                 </div>
                 <div>
                     <div className='jisuan'>jisuaninputzhi</div>
-                </div>
-                
+                </div>  
             </div>
         )
     }

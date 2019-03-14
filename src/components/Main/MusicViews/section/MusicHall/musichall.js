@@ -91,8 +91,6 @@ class Musichall extends React.Component{
                                             <p>{item.name}</p>
                                             <span>{item.creator}</span>
                                         </div>
-                                    
-                                        
                                                                      
                                 </li>)
                             })
