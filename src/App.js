@@ -23,7 +23,7 @@ class App extends Component {
             <Route path="/newsong" component={Newsong}></Route>                                                                                                                                                                                                                                                                                                                                                                                                                                            
             <Route path="/login" component={Login}/>
             <Route path="/regist" component={Regist}/>
-            <Route path="/main" component={Main}/>
+            <Route path="/main" component={Main}/>          
                               
             
           </div>         

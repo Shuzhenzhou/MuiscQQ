@@ -8,7 +8,7 @@
 .loginBox{
     position: absolute;
     left: 37px;
-    top: 372px;
+    top: 300px;
     width: 80%;
     height: 200px;
     text-align: center;
@@ -40,5 +40,6 @@
 .loginBox .login-btn:active{
     background: #0e80d2;
 }
+
 
 
