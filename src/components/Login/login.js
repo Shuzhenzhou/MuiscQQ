@@ -22,7 +22,7 @@ class Login extends React.Component{
        console.log(name,password)
       $.ajax({
                 type:'POST',
-                url:'http://47.94.8.35/QQMusic/Login.do',
+                url:'http://47.94.8.35/QQMusic/login.do',
                 data:{name:name,password:password},
                 async:true,
                 dataType:'json',

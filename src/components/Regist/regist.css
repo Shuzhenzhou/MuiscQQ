@@ -22,7 +22,7 @@
 .registBox{
     position: absolute;
     left: 37px;
-    top: 372px;
+    top: 262px;
     width: 80%;
     height: 200px;
     text-align: center;
@@ -59,5 +59,22 @@
 }
 .registBox .regist-btn:active{
     background: #0e80d2;
+}
+.registBox p{
+    width: 100%;
+    line-height:50px;
+    color: #fff; 
+    font-size: 18px;
+}
+.registBox p span{
+    display: inline-block;
+    width: 40%;
+    line-height:50px;
+}
+.registBox p span input{
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    line-height:50px;
 }
 

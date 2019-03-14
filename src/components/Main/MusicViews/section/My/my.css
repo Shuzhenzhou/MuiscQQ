@@ -4,6 +4,11 @@
 }
 .center-tlogi{
     height: 70px;
+    text-align: center;
+
+}
+.center-tlogi h3{
+    line-height: 70px;
 }
 .center-member{
     height: 70px;
