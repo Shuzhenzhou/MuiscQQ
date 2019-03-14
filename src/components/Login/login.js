@@ -19,7 +19,7 @@ class Login extends React.Component{
         this.setState({username:Store.getState().islogin})
     }
     rightLink(){
-        // this.props.history.push('/regist');
+        this.props.history.push('/regist');
         
         $.ajax({
             url:'http://47.94.8.35/QQMusic/getsession.do',
@@ -51,7 +51,7 @@ class Login extends React.Component{
                         Toast.success('登陆成功', 1);
                         Store.dispatch(Action.isLogin(name))
                         setTimeout(function(){
-                           // _this.props.history.push('/main')
+                            _this.props.history.push('/main')
                         },1000)
                       /*   $.ajax({
                                 url:'http://47.94.8.35/QQMusic/getsession.do',
