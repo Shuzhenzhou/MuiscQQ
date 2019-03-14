@@ -98,11 +98,13 @@ audio{
       text-overflow: ellipsis;
   }
   .sousoqu li span:nth-child(2){
+      display: inline;
+      width: 100px;
     color: #cecece;
 }
 .sousoqu li span:nth-child(3){
+    font-size: 15px;
     display: inline-block;
-    height: 100%;;
     margin-left:50px;
 
 }
