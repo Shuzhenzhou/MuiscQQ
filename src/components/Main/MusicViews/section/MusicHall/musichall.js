@@ -12,7 +12,8 @@ class Musichall extends React.Component{
                 ],
             imgHeight: 176,
             gedanList:[]
-        }      
+        }    
+         
     }
 
     zhuanji(id){
@@ -28,6 +29,20 @@ class Musichall extends React.Component{
                 console.log(data)
             }
         }) */
+    }
+
+    componentDidMount(){
+         
+        var _this=this;   
+     $.ajax({
+         url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',
+         async:true,
+         dataType:'json',
+         success:function(data){
+             console.log(data)
+             _this.setState({gedanList:data.data})
+         }
+     })
     }
 
     render(){
@@ -106,18 +121,6 @@ class Musichall extends React.Component{
         )
     }
 
-    componentDidMount(){
-        var _this=this;
     
-     $.ajax({
-         url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',
-         async:true,
-         dataType:'json',
-         success:function(data){
-             console.log(data)
-             _this.setState({gedanList:data.data})
-         }
-     })
-    }
 }
 export default Musichall;

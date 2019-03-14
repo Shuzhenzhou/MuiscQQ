@@ -14,16 +14,44 @@ class Gedan extends React.Component{
         this.state={
             list:{},
             songs:[],
-            gequid:''
+            gequid:Store.getState().bofangge
         }
+        this.changeItem=this.changeItem.bind(this)
     }
 
     buofang(id){
-     
         Store.dispatch(Action.boFang(id))
     }
     changeItem(){
         this.setState({gequid:Store.getState().bofangge})
+    }
+    componentDidMount(){   
+        Store.subscribe(this.changeItem)
+        var myIscroll=new IScroll('.gedan-out',{})
+            console.log(myIscroll.maxScrollY);
+           /*  $(document).on('touchend',function(){
+                
+                if(myIscroll.y>50){
+                    console.log('下拉刷新')
+                }
+                if(myIscroll.y < myIscroll.maxScrollY-50){
+                    console.log('上拉加载')
+                    
+                }
+            }) */
+            myIscroll.refresh();
+
+        var _this=this;
+        $.ajax({
+            url:'https://api.bzqll.com/music/tencent/songList?key=579621905&id='+this.props.location.query.id,
+            async:true,
+            dataType:"json",
+            success:function(data){
+                
+                console.log(data.data)
+                _this.setState({list:data.data,songs:data.data.songs})
+            }
+        })
     }
 
     render(){
@@ -55,7 +83,7 @@ class Gedan extends React.Component{
                             this.state.songs.map((item,i)=>{
                                 return(
                                     <li key={i}>
-                                        <div className='gequ-l' onTouchEnd={_this.buofang.bind(_this,item.id)}>
+                                        <div className='gequ-l' onTouchEnd={_this.buofang.bind(_this,item.url)}>
                                             <p>{item.name}</p>
                                             <p className='name'>{item.singer}</p>
                                         </div>
@@ -71,35 +99,6 @@ class Gedan extends React.Component{
                 </div>
             </div>
         )
-    }
-
-    componentDidMount(){
-        Store.subscribe(this.changeItem)
-            var myIscroll=new IScroll('.gedan-out',{})
-            console.log(myIscroll.maxScrollY);
-           /*  $(document).on('touchend',function(){
-                
-                if(myIscroll.y>50){
-                    console.log('下拉刷新')
-                }
-                if(myIscroll.y < myIscroll.maxScrollY-50){
-                    console.log('上拉加载')
-                    
-                }
-            }) */
-            myIscroll.refresh();
-
-        var _this=this;
-        $.ajax({
-            url:'https://api.bzqll.com/music/tencent/songList?key=579621905&id='+this.props.location.query.id,
-            async:true,
-            dataType:"json",
-            success:function(data){
-                
-                console.log(data.data)
-                _this.setState({list:data.data,songs:data.data.songs})
-            }
-        })
     }
 }
 
