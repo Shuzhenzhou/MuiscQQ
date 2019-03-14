@@ -150,6 +150,7 @@ class MusicView extends React.Component{
                                     return(<li key={i} onTouchEnd={this.bofang.bind(this,item.url)}>
                                         <span>{item.name}</span>
                                         <span>{item.singer}</span>
+                                        <span className='shouchang'>收藏</span>
                                     </li>)
                                     
                                 })

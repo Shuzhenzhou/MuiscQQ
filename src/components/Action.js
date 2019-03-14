@@ -4,6 +4,12 @@ var Action={
             type:"BOFANG",
             text:msg
         }
+    },
+    isLogin(msg){
+        return{
+            type:'ISLOGIN',
+            text:msg
+        }
     }
 }
 

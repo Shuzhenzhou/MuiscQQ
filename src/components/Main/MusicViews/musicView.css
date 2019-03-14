@@ -84,7 +84,6 @@ audio{
   }
   .sousoqu li{
       height: 33px;
-      line-height: 28px;
       border: 1px solid #cecece;
       padding: 0 10px; 
       border-radius:5px;     
@@ -92,7 +91,7 @@ audio{
 
   .sousoqu li span:nth-child(1){
       display:inline-block;
-      width: 200px;
+      width: 100px;
       font-size:20px;
       white-space:nowrap;
       overflow: hidden;
@@ -100,6 +99,16 @@ audio{
   }
   .sousoqu li span:nth-child(2){
     color: #cecece;
+}
+.sousoqu li span:nth-child(3){
+    display: inline-block;
+    height: 100%;;
+    margin-left:50px;
+
+}
+.sousoqu .shouchang{
+    display: inline-block;
+    width: 50px;
 }
 
 
