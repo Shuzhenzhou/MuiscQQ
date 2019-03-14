@@ -10,7 +10,8 @@ import like from "../../../../../assets/img/icon-grid-favorite.png"
 import payfor from "../../../../../assets/img/icon-grid-video.png"
 import run from "../../../../../assets/img/icon-zanting.png"
 import right from "../../../../../assets/img/icon-right.png"
-
+import huiyuan from "../../../../../assets/img/huiyuan.png"
+import huodong from "../../../../../assets/img/huodongzhongxin.png"
 class My extends React.Component{
   constructor(props){
       super(props)
@@ -37,7 +38,7 @@ class My extends React.Component{
                 <div className="center-member">
                     <ul>
                         <li>
-                            <i>icon</i>
+                            <i><img src={huodong}/></i>
                             <div className="center-mem">
                                 <h2>活动中心</h2>
                                 <p>回购好礼派发中</p>
@@ -45,7 +46,7 @@ class My extends React.Component{
                         </li>
 
                         <li>
-                            <i>icon</i>
+                            <i><img src={huiyuan}/></i>
                             <div className="center-mem">
                                 <h2>会员中心</h2>
                                 <p>现实7.6折开通</p>

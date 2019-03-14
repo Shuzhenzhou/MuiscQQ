@@ -4,6 +4,10 @@ import $ from 'jquery'
 import { Carousel, WingBlank } from 'antd-mobile';
 import './musichall.css'
 import baner1 from '../../../../../assets/img/mu-baneer01.png'
+import geshou from "../../../../../assets/img/icon-grid-singer.png"
+import paihang from "../../../../../assets/img/icon-grid-categories.png"
+import fenlei from "../../../../../assets/img/icon-grid-video.png"
+import vidos from "../../../../../assets/img/icon-grid-video.png"
 class Musichall extends React.Component{
     constructor(props){
         super(props)
@@ -76,19 +80,19 @@ class Musichall extends React.Component{
 
                 <div className='Musichall-nav'>
                     <div>
-                        <p>歌</p>
+                        <p> <img src={geshou} className="Musichall-tubaio"/> </p>
                         <p>歌手</p>
                     </div>
                     <div>
-                        <p>排</p>
-                        <p>排行榜</p>
+                        <p> <img src={paihang} className="Musichall-tubaio"/></p>
+                        <p>排行</p>
                     </div>
                     <div>
-                        <p>电</p>
+                        <p> <img src={fenlei} className="Musichall-tubaio"/></p>
                         <p>电台</p>
                     </div>
                     <div>
-                        <p>视</p>
+                        <p> <img src={vidos} className="Musichall-tubaio"/></p>
                         <p>视频</p>
                     </div>
                 </div>

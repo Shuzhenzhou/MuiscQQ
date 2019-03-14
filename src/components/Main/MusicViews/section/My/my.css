@@ -28,9 +28,11 @@
 }
 .center-member ul li i{
    width: 40px;
-   background: gold;
-   height: 10px
 }
+.center-member ul li i img{
+    display: inline-block;
+    width: 40px;
+ }
 .center-mem h2{
     font-size: 16px;
     line-height: 24px;

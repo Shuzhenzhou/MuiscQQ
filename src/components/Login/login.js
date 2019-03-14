@@ -53,7 +53,7 @@ class Login extends React.Component{
                         setTimeout(function(){
                             _this.props.history.push('/main')
                         },1000)
-                      /*   $.ajax({
+                       $.ajax({
                                 url:'http://47.94.8.35/QQMusic/getsession.do',
                                 data:{name:name,password:password},
                                 async:true,
@@ -61,7 +61,7 @@ class Login extends React.Component{
                                 success:function(data){
                                     console.log(data)
                                 }        
-                            }) */
+                            })
                         
                     }else{
                         Toast.offline('密码或账号错误，请重试', 1);

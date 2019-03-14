@@ -12,6 +12,9 @@
     text-align: center;
 
 }
+.Musichall-nav div p{
+    text-align: center;
+}
 .Recommend img{
     height: 178px;
     width: 178px;
@@ -38,4 +41,8 @@
 .Recommend span{
     display: block;
     margin: 10px 0;
+}
+.Musichall-tubaio{
+    width: 30px;
+    height: 30px;
 }
