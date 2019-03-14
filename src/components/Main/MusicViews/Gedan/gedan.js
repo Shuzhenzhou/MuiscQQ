@@ -25,6 +25,21 @@ class Gedan extends React.Component{
     changeItem(){
         this.setState({gequid:Store.getState().bofangge})
     }
+    shouchang(id){
+        console.log(id)
+        if(Store.getState().islogin.length!=0){
+            $.ajax({
+                url:'http://47.94.8.35/QQMusic/addColler.do',
+                async:true,
+                data:{uid:Store.getState().islogin,sid:id},
+                dataType:'json',
+                success:function(data){
+                    console.log(data)
+                }
+            })
+        }
+        
+    }
     componentDidMount(){   
         Store.subscribe(this.changeItem)
         var myIscroll=new IScroll('.gedan-out',{})
@@ -77,9 +92,7 @@ class Gedan extends React.Component{
                             <div>{this.state.list.author}</div>
                         </div>              
                     </div>
-                    <div className='gedan-head-bottom'>
-                        <span>收藏</span>
-                    </div>
+
                 </div>
                 <section>
                     <ul className='gequ'>
@@ -91,7 +104,7 @@ class Gedan extends React.Component{
                                             <p>{item.name}</p>
                                             <p className='name'>{item.singer}</p>
                                         </div>
-                                        <div className="gequ-r">
+                                        <div className="gequ-r" onTouchEnd={_this.shouchang.bind(_this,item.id)}>
                                             收藏
                                         </div>                                      
                                     </li>

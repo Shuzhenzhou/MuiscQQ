@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery'
 import './main.css'
 import Stting from './Settings/setting'
 import MusicView from './MusicViews/musicView'
@@ -24,9 +25,7 @@ class Main extends React.Component{
     }
 
     componentDidMount(){
-        if(this.state.iszhankai){
-
-        }
+        
     }
 }
 

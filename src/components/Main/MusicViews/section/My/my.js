@@ -1,4 +1,6 @@
 import React from 'react'
+import $ from 'jquery'
+import Store from '../../../../Store'
 import './my.css'
 import {Route,BrowserRouter as Router,NavLink,Redirect} from 'react-router-dom'
 import music from "../../../../../assets/img/icon-grid-music.png"
@@ -135,6 +137,19 @@ class My extends React.Component{
             </div>
             </Router>  
         )
+    }
+
+    componentDidMount(){
+       console.log(Store.getState().islogin)
+       
+        $.ajax({
+            url:'http://47.94.8.35/QQMusic/getsession.do',
+            async:true,
+            dataType:'json',
+            scuccess:function(data){
+                console.log(data)
+            }
+        })
     }
 }
 export default My;
