@@ -1,4 +1,5 @@
 import React from 'react'
+import { Toast } from 'antd-mobile';
 import './regist.css'
 import $ from 'jquery'
 
@@ -61,16 +62,21 @@ class Regist extends React.Component{
                             console.log(data)
                             console.log(data.code)
                             if(data.code==1){
-                                alert("注册成功请登录")
-                                _this.props.history.push('/login')
+                                
+                                Toast.success('注册成功请登录', 1);
+                                setTimeout(function(){
+                                    _this.props.history.push('/login')
+                                },1000)
+                                
                             }
                             if(data.code==100){
-                                alert("您输入的用户名或手机号已存在")
+
+                                Toast.offline('您输入的用户名或手机号已存在', 1);
                             }
                         }
                     })  
                 } else { 
-                    alert('密码必须大于六位,昵称不能为空');
+                    Toast.offline('密码必须大于六位,昵称不能为空', 1);
                 } 
      
     }

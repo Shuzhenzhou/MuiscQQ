@@ -45,12 +45,12 @@
 audio{
     width: 100%;
 }
-.musicView-out section{
+/* .musicView-out section{
     flex: 1;  
   
     overflow: hidden;
     
-}
+} */
 
 .musicView-out footer{
     overflow: hidden;
