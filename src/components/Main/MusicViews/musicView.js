@@ -87,21 +87,28 @@ class MusicView extends React.Component{
 
     componentDidMount(){
         
-    //     var _this=this;
         
-    //     Store.subscribe(this.changeItem)
-    //     var myIscroll=new IScroll('section',{})
-    //    /*  $(document).on('touchend',function(){
+            var myIscroll=new IScroll('section',{})
+            console.log(myIscroll.maxScrollY)
+            myIscroll.refresh();
+        
+        
+        var _this=this;
+        
+        Store.subscribe(this.changeItem)
+        
+        
+       /*  $(document).on('touchend',function(){
             
-    //         if(myIscroll.y>50){
-    //             console.log('下拉刷新')
-    //         }
-    //         if(myIscroll.y < myIscroll.maxScrollY-50){
-    //             console.log('上拉加载')
+            if(myIscroll.y>50){
+                console.log('下拉刷新')
+            }
+            if(myIscroll.y < myIscroll.maxScrollY-50){
+                console.log('上拉加载')
                 
-    //         }
-    //     }) */
-    //     myIscroll.refresh();
+            }
+        }) */
+        
 
         
         
@@ -109,6 +116,8 @@ class MusicView extends React.Component{
 
     
     render(){
+        
+        
         
         var isyc={
             display:this.state.isshowyc,

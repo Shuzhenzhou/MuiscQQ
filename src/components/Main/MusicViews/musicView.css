@@ -45,11 +45,13 @@
 audio{
     width: 100%;
 }
-/* .musicView-out section{
+.musicView-out section{
     flex: 1;  
-  
-    overflow: hidden;
     
+    
+}
+/* .sectionBox{
+    height: auto;
 } */
 
 .musicView-out footer{
@@ -65,10 +67,6 @@ audio{
     padding: 30px 0 18px 0;
   }
   
-  .sectionBox{
-      height: 8300px;
-      overflow: hidden;
-  }
 
 
 

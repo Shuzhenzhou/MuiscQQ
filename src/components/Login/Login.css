@@ -2,7 +2,7 @@
     position: relative;
     width: 100vw;
     height: 100vh;
-    background: url('../../assets/img/loginbj.png');
+    background: url('./../../assets/img/loginbj.png');
     background-size:cover;
 }
 .loginBox{
