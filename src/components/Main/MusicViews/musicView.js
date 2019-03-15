@@ -70,7 +70,7 @@ class MusicView extends React.Component{
         console.log(id)
         if(Store.getState().islogin.length!=0){
             $.ajax({
-                url:'http://47.94.8.35/QQMusic/addColler.do',
+                url:'http://47.94.8.35/QQMusic/netadd.do',
                 async:true,
                 data:{uid:Store.getState().islogin,sid:id},
                 dataType:'json',
@@ -86,6 +86,15 @@ class MusicView extends React.Component{
 
 
     componentDidMount(){
+
+        $.ajax({
+            url:'http://47.94.8.35/QQMusic/getsession.do',
+            async:true,
+            dataType:'json',
+            success:function(data){
+                console.log(data)
+            }
+        })
         
         var _this=this;
         

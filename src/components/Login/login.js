@@ -20,15 +20,6 @@ class Login extends React.Component{
     }
     rightLink(){
         this.props.history.push('/regist');
-        
-        $.ajax({
-            url:'http://47.94.8.35/QQMusic/getsession.do',
-            async:true,
-            dataType:'json',
-            success:function(data){
-                console.log(data)
-            }
-        })
        
     }
 
@@ -37,7 +28,6 @@ class Login extends React.Component{
        var _this=this;
        var name =this.refs.name.value;
        var password=this.refs.password.value;
-       console.log(name,password)
        if(name.length !=0 && password!=0){
             $.ajax({
                 type:'post',
@@ -46,22 +36,14 @@ class Login extends React.Component{
                 async:true,
                 dataType:'json',
                 success:function(data){
-                    console.log(data)
+                    console.log(data.data)
                     if(data.code==1){
                         Toast.success('登陆成功', 1);
-                        Store.dispatch(Action.isLogin(name))
+                        Store.dispatch(Action.isLogin(data.data))
                         setTimeout(function(){
                             _this.props.history.push('/main')
                         },1000)
-                       $.ajax({
-                                url:'http://47.94.8.35/QQMusic/getsession.do',
-                                data:{name:name,password:password},
-                                async:true,
-                                dataType:'json',
-                                success:function(data){
-                                    console.log(data)
-                                }        
-                            })
+                       
                         
                     }else{
                         Toast.offline('密码或账号错误，请重试', 1);

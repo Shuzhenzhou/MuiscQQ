@@ -36,7 +36,7 @@ class Musichall extends React.Component{
     }
 
     componentDidMount(){
-         
+        
         var _this=this;   
      $.ajax({
          url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',

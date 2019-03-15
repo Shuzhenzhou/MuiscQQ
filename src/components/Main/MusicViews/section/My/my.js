@@ -22,12 +22,13 @@ class My extends React.Component{
         window.location.href="/newsong"
     }
     like(){
-        window.location.href="/ilike"
+        window.location.href="/ilike?uid="+Store.getState().islogin
     }
     nowshow(){
         this.props.history.push("/nowshow")
     }
     render(){
+        console.log(Store.getState().islogin)
         return(
             <Router>  
             <div className='myOut'> 
@@ -143,14 +144,7 @@ class My extends React.Component{
     componentDidMount(){
       
        
-        $.ajax({
-            url:'http://47.94.8.35/QQMusic/getsession.do',
-            async:true,
-            dataType:'json',
-            scuccess:function(data){
-                console.log(data)
-            }
-        })
+       
     }
 }
 export default My;
