@@ -38,7 +38,7 @@ class Musichall extends React.Component{
     componentDidMount(){
         
         var _this=this;   
-     $.ajax({
+    /*  $.ajax({
          url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',
          async:true,
          dataType:'json',
@@ -46,8 +46,42 @@ class Musichall extends React.Component{
              console.log(data)
              _this.setState({gedanList:data.data})
          }
-     })
+     }) */
+     $.ajax({
+        url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',
+        async:true,
+        dataType:'json',
+        success:function(data){
+            if(data){
+                console.log(data)
+            _this.setState({gedanList:data.data})
+            }
+            
+        }
+    })
+    /* if(this.state.gedanList.length!=0){
+        var aa=setInterval(function(){
+            console.log('aa')
+           $.ajax({
+               url:'https://api.bzqll.com/music/tencent/hotSongList?key=579621905&categoryId=10000000&sortId=3&limit=60',
+               async:true,
+               dataType:'json',
+               success:function(data){
+                   if(data){
+                       console.log(data)
+                   _this.setState({gedanList:data.data})
+                   }
+                   
+               }
+           })
+        },100)
+        if(this.state.gedanList.length!=0){
+           clearInterval(aa)
+        }
+        
+       } */
     }
+    
 
     render(){
         var _this=this;       
